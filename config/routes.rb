@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resource :home do
     collection do
       get :step1
+      get :step2
     end
   end
 
