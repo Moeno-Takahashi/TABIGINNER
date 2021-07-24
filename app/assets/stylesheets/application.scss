@@ -1,0 +1,184 @@
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body {
+  width: 100%;
+  background-color:#FBFCDA;
+  color: #6B6666;
+}
+
+h1{
+  font-size: 200%;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.button {
+  border-radius: 5px;
+  background: #FCF7DA;
+  border: 1px solid #6B6666;
+  width: 150px;
+  height: 70px;
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin btn {
+  border-radius: 5px;
+  background: #FCF7DA;
+  border: 2px solid #6B6666;
+  color: #6B6666;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+@mixin page {
+  font-size: 20px;
+  margin: 60px auto 200px auto;
+  width: 80%;
+  text-align: center;
+  .btn {
+    @include btn;
+    padding-top: 2px;
+  }
+  input,select {
+    height:30px;
+  }
+  label {
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+}
+
+i{
+  color: #6B6666;
+}
+
+// users#new
+
+.user-new-common {
+  width: 100%;
+  .user-new {
+    margin: 60px auto 200px auto;
+    width: 80%;
+    .submit {
+      text-align: center;
+      .btn {
+        @include btn;
+        padding-top: 2px;
+      }
+    }
+    label {
+      margin-top: 10px;
+      margin-bottom: 3px;
+    }
+    input,select {
+      height: 30px;
+    }
+    .sex {
+      input[type="radio"]
+      {
+      transform: scale(0.5); 
+      margin:10px;
+      display: inline;
+      }
+      label.collection_radio_buttons {
+       display: block;
+       text-align: center;
+      }
+    }
+    .password_reset_link{
+       display: block;
+       text-align: center;
+    }
+    .link {
+      text-align: center;
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+// users#show
+
+.user-show {
+  margin-bottom: 30%;
+  margin-top: 10%;
+  .user-passport {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: 0.7rem;
+    img {
+      width: 90%;
+      height: 53%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .user-image {
+      position: absolute;
+      width: 25%;
+      left: 9%;
+      top: 20%;
+    }
+     .last_name {
+       position: absolute;
+       font-weight: bold;
+       top: 31%;
+       left: 37%;
+     }
+     .first_name {
+      position: absolute;
+      font-weight: bold;
+      top: 42%;
+      left: 37%;
+     }
+     .sex {
+      position: absolute;
+      font-weight: bold;
+      top: 63%;
+      left: 37%;
+     }
+     .birthday {
+      position: absolute;
+      font-weight: bold;
+      top: 53%;
+      left: 55%;
+     }
+    }
+    .user-button {
+      text-align: center;
+      margin-top: 40px;
+      .btn {
+        @include btn;
+        margin-bottom: 0px;
+        width: 30%;
+      }
+  }
+  .dialog {
+    display: none;
+    position: fixed;
+    top: 35%;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    padding: 0;
+    border: 2px #6B6666 solid;
+    border-radius: 5px;
+    background-color: #FCF7DA;
+    box-shadow: 1px 1px 2px #333;
+    color: #6B6666;
+    .btn {
+      @include btn;
+      margin-top: 10px;
+    }
+    h5 {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  }
+}
