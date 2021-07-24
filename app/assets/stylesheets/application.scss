@@ -70,6 +70,20 @@ i{
     @include btn;
   }
 }
+.countdown-comment {
+  text-align: center;
+  .remain_days {
+    font-size: 40px;
+    margin:20px 0 30px 0;
+    color:#6B6666;
+  }
+  .comment {
+    font-size: 15px;
+    margin-bottom: 50px;
+    color:#6B6666;
+  }
+  
+}
 
 // home#step
 
@@ -129,6 +143,113 @@ i{
     height: 36px;
   }
 }
+
+// usage
+.usage-common {
+  width: 90%;
+  margin-bottom: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  h4 {
+    margin-top: 20%;
+    margin-bottom: 10%;
+    font-weight: bolder;
+    border-bottom: dotted 2px #6B6666;  
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  .text {
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 10%;
+  }
+  .text-two {
+    background:linear-gradient(transparent 70%, #FFF1A1 0%);; 
+    padding: 0px;
+    margin-bottom: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    width:60%;
+  }
+  .usage-content {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    padding: 5%;
+    background-color: rgba(255,241,161, 0.6);
+    border-radius: 10px;
+    h5 {
+      font-weight: bold;
+    }
+    .image {
+      width: 60%;
+      border: 3px solid rgba(107,102,102, 0.6);
+      border-radius: 25px;
+      margin-bottom: 5%;
+    }
+    .usage-plan {
+      text-align: center;
+      margin-bottom: 5%;
+      p {
+        margin-bottom: 0px;
+      }
+    }
+    .description {
+      font-weight: bold;
+      margin-top: 5%;
+    }
+  }
+  .btn {
+    @include btn;
+  }
+}
+
+// advice
+.advice {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 200px;
+  p {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  h1 {
+    margin-top: 20px;
+  }
+  li {
+    font-size: 20px;
+    text-align: left;
+    margin-top: 20px
+  }
+  ul {
+    margin: 10px 0 0 10px;
+  }
+  .btn {
+    @include btn;
+    margin-top: 20px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+// terms_of_use
+.terms_of_use {
+  width: 90%;
+  margin-bottom: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  .title {
+    font-weight: bold;
+  }
+  .btn {
+    @include btn;
+  margin-left: 40%;
+  }
+}
+
 // footer
 
 .footer-wrap{

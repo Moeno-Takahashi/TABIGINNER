@@ -15,4 +15,14 @@ class HomesController < ApplicationController
   def step3; end
 
   def step4; end
+
+  def step5
+    @remain_days = remain_days
+  end
+
+  def usage; end
+
+  def advice; end
+
+  def terms_of_use; end
 end
