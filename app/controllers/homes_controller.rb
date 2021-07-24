@@ -7,4 +7,6 @@ class HomesController < ApplicationController
       redirect_to user_path
     end
   end
+
+  def step1; end
 end
