@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       get :step1
       get :step2
       get :step3
+      get :step4
     end
   end
 
@@ -21,6 +22,9 @@ Rails.application.routes.draw do
     resource :day, only: %i[edit update]
     resource :schedule, only: %i[edit update]
   end
+
+  post '/callback' => 'linebot#callback'
+  post '/line_user' => 'linebot#create'
 
   
 end
