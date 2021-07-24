@@ -16,11 +16,5 @@ Rails.application.routes.draw do
     end
   end
 
-  resource :plan, only: %i[show] do
-    resource :country, only: %i[new create edit update]
-    resource :day, only: %i[edit update]
-    resource :schedule, only: %i[edit update]
-  end
-
   
 end
