@@ -21,4 +21,6 @@ class HomesController < ApplicationController
   end
 
   def usage; end
+
+  def advice; end
 end

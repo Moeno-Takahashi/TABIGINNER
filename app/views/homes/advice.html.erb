@@ -1,0 +1,18 @@
+<div class='advice'>
+  <p>行き先が決まらない時は...</p>
+  <h1>東南アジアがおすすめ!!</h1>
+  <ul>
+  <li>物価が安い</li>
+  <li>親日国が多い</li>
+  <li>航空券が安い</li>
+  <li>バックパッカーが多い</li>
+  <li>陸続きで色々な国へ一気に行ける</li>
+  <li>治安がそれほど悪くない</li>
+  </ul>
+  <% if @plan.present? %>
+  <%= link_to '戻る', edit_plan_country_path, class: 'btn', data: {"turbolinks" => false} %>
+  <% else %>
+  <%= link_to '戻る', new_plan_country_path, class: 'btn', data: {"turbolinks" => false} %>
+  <% end %>
+  <%= image_tag 'advice.png' %>
+</div>
