@@ -62,3 +62,9 @@ gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
 gem 'font-awesome-sass'
 
+#Model
+gem 'enum_help'
+
+# UI/UX
+gem 'rails-i18n'
+

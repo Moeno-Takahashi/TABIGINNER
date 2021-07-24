@@ -1,0 +1,52 @@
+ja:
+  users:
+    create:
+      success: 'ユーザー登録が完了しました'
+      fail: 'ユーザー登録に失敗しました'
+    update:
+      success: 'ユーザー情報を更新しました'
+      fail: 'ユーザー情報を更新できませんでした'
+    destroy:
+      success: '退会しました'
+  user_sessions:
+    create:
+      success: 'ログインしました'
+      fail: 'ログインできませんでした'
+  schedules:
+    update: 
+      success: '出発予定日を決定しました'
+      fail: '出発予定日の決定に失敗しました'
+  days:
+    update:
+      success: '日数を決定しました'
+      fail: '日数の決定に失敗しました'
+  countries:
+    create: 
+      success: '目的地を決定しました'
+      fail: '目的地の決定に失敗しました'
+    update:
+      success: '目的地を更新しました'
+      fail: '目的地の更新に失敗しました'
+  password_resets:
+    create:
+      success: 'メールを送信しました'
+    update:
+      success: 'パスワードを再設定しました'
+      fail: 'パスワードの再設定に失敗しました'
+  tasks:
+    create:
+      success: 'マイタスクを作成しました'
+      fail: 'マイタスクの作成に失敗しました'
+    destroy:
+      success: 'マイタスクを削除しました'
+  items:
+    create:
+      success: 'マイアイテムを作成しました'
+      fail: 'マイアイテムの作成に失敗しました'
+    destroy:
+      success: 'マイアイテムを削除しました'
+  linebot:
+    create:
+      success: '友だち追加が完了しました'
+ 
+    

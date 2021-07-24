@@ -1,0 +1,20 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        email: 'メールアドレス'
+        password: 'パスワード'
+        password_confirmation: 'パスワード確認'
+        last_name: '姓'
+        first_name: '名'
+        birthday: '生年月日'
+        prefecture_code: '居住地'
+        user_image: 'プロフィール画像'
+        sex: '性別'
+      task:
+        title: 'タイトル'
+        body: 'コメント'
+      item:
+        title: 'タイトル'
+        body: 'コメント'
+            

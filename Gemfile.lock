@@ -87,6 +87,8 @@ GEM
       dotenv (= 2.7.6)
       railties (>= 3.2)
     encryptor (3.0.0)
+    enum_help (0.0.17)
+      activesupport (>= 3.0.0)
     erubi (1.10.0)
     execjs (2.8.1)
     faraday (1.5.1)
@@ -184,6 +186,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.3.0)
       loofah (~> 2.3)
+    rails-i18n (6.0.0)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 7)
     railties (6.0.4)
       actionpack (= 6.0.4)
       activesupport (= 6.0.4)
@@ -263,6 +268,7 @@ DEPENDENCIES
   byebug
   carrierwave (~> 2.0)
   dotenv-rails
+  enum_help
   font-awesome-sass
   jbuilder (~> 2.7)
   jquery-rails
@@ -273,6 +279,7 @@ DEPENDENCIES
   mysql2 (>= 0.4.4)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.7)
+  rails-i18n
   sass-rails (>= 6)
   simple_form
   sorcery
