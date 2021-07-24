@@ -331,3 +331,37 @@ i{
     text-align: left;
  }
 }
+
+// days
+.days-common {
+  width: 100%;
+  margin-bottom: 200px;
+  .days-container{
+    text-align: center;
+    margin-top: 50px;
+    input {
+      display: none;
+    }
+     .btn {
+       @include btn;
+       display: block;
+       margin: 40px auto 0 auto;
+     }
+    label {
+      cursor: pointer;
+      border: 2px solid #6B6666;
+      background: #FCF7DA;
+      border-radius: 10px;
+      font-size: 20px;
+      width: 80%;
+      margin-top: 10px;
+    }
+    .radio_button:checked + .label {
+      background-color: #FFF1A1;
+    }
+    img {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+}

@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   resource :plan, only: %i[show] do
     resource :country, only: %i[new create edit update]
+    resource :day, only: %i[edit update]
   end
 
   
