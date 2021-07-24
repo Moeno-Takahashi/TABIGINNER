@@ -1,0 +1,21 @@
+<h1>ログイン</h1>
+<div class='user-new-common'>
+<div class='user-new'>
+  <%= form_with  url: user_sessions_path, method: :post, local: true do |f| %>
+    <div class='field'>
+      <%= f.label 'メールアドレス' %>
+      <%= f.text_field :email, class: 'form-control' %>
+    </div>
+  
+    <div class='field'>
+      <%= f.label 'パスワード' %>
+      <%= f.password_field :password, class: 'form-control' %>
+    </div>
+  
+    <div class='submit'>
+      <%= f.submit 'ログイン', class: 'btn' %>
+    </div>
+  <% end %>
+  <%= link_to 'トップページ', root_path, class: 'link' %>
+</div>
+</div>
