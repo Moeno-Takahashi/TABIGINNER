@@ -57,6 +57,20 @@ i{
   color: #6B6666;
 }
 
+// home#index
+
+.home {
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+  .btn {
+    @include btn;
+  }
+}
+
 // users#new
 
 .user-new-common {
