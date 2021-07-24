@@ -1,0 +1,35 @@
+<div class='footer-wrap'>
+  <div class='footer'>
+    <div class='content'>
+      <%= link_to image_tag('passport.png', class: 'content-logo'), user_path, data: {"turbolinks" => false} %>
+    </div>
+    <div class='content'>
+      <%= link_to image_tag('calender.png', class: 'content-logo'), plan_path %>
+    </div>
+    <div class='content'>
+      <% if @plan.present? %>
+        <% if @plan.days.present? %>
+          <% if @plan.departure_date.present? %>
+            <% if current_user.line_user.present? %>
+              <%= link_to image_tag('home.png', class: 'content-logo'), step5_home_path %>
+            <% else %>
+              <%= link_to image_tag('home.png', class: 'content-logo'), step4_home_path %>
+            <% end %>
+          <% else %>
+            <%= link_to image_tag('home.png', class: 'content-logo'), step3_home_path %>
+          <% end %>
+        <% else %>
+          <%= link_to image_tag('home.png', class: 'content-logo'), step2_home_path %>
+        <% end %>
+      <% else %>
+        <%= link_to image_tag('home.png', class: 'content-logo'), step1_home_path %>
+      <% end %>
+    </div>
+    <div class='content'>
+      <%= link_to image_tag('ruck.png', class: 'content-logo'), user_items_path, data: {"turbolinks" => false} %>
+    </div>
+    <div class='content'>
+      <%= link_to image_tag('article.png', class: 'content-logo'), user_tasks_path, data: {"turbolinks" => false} %>
+    </div>
+  </div>
+</div>
