@@ -57,6 +57,73 @@ i{
   color: #6B6666;
 }
 
+// home#index
+
+.home {
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+  .btn {
+    @include btn;
+  }
+}
+
+// home#step
+
+.step {
+  text-align: center;
+  margin-bottom: 200px;
+  width: 100%;
+  .btn {
+    @include btn;
+    font-size: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 60%;
+  }
+  p {
+    margin: 20px;
+  }
+  .btn-line-user {
+    @include btn;
+    font-size: 15px;
+    width: 31%;
+    margin-top: 0px;
+    padding: 5px;
+  }
+  .backpacker {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-left: 12px;
+  }
+  .dialog {
+    display: none;
+    position: fixed;
+    top: 35%;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    padding: 0;
+    border: 2px #6B6666 solid;
+    border-radius: 5px;
+    background-color: #FCF7DA;
+    box-shadow: 1px 1px 2px #333;
+    color: #6B6666;
+    .btn {
+      @include btn;
+      margin-top: 10px;
+    }
+    h5 {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  }
+}
+
 // users#new
 
 .user-new-common {
