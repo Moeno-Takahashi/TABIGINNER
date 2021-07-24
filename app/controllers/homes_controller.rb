@@ -23,4 +23,6 @@ class HomesController < ApplicationController
   def usage; end
 
   def advice; end
+
+  def terms_of_use; end
 end

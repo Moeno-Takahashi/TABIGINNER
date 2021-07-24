@@ -235,6 +235,21 @@ i{
   }
 }
 
+// terms_of_use
+.terms_of_use {
+  width: 90%;
+  margin-bottom: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  .title {
+    font-weight: bold;
+  }
+  .btn {
+    @include btn;
+  margin-left: 40%;
+  }
+}
+
 // footer
 
 .footer-wrap{

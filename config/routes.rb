@@ -17,6 +17,7 @@ Rails.application.routes.draw do
       get :step5
       get :usage
       get :advice
+      get :terms_of_use
     end
   end
 
