@@ -292,3 +292,42 @@ i{
     }
   }
 }
+
+// country
+
+.country-common  {
+  width: 100%;
+  margin-bottom: 200px;
+  .country {
+    margin:50px auto;
+    text-align: center;
+    width: 80%;
+    .continent {
+      cursor: pointer;
+      font-size: 25px;
+      margin-top: 30px;
+      border-bottom: 2px solid;
+    }
+    .continent:hover {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .btn {
+      @include btn;
+      margin-top: 35px;
+      margin-bottom: 10px;
+    }
+    .undecided{
+      font-size: 20px;
+      color:#6B6666;
+    }
+    input[type=checkbox] {
+      transform: scale(1);
+    }
+  }
+  #box_1, #box_2, #box_3, #box_4, #box_5, #box_6, #box_7 {
+    display: none;
+    font-size: 20px;
+    text-align: left;
+ }
+}

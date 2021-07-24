@@ -1,0 +1,91 @@
+<%= form_with model: @plan, url: url, local: true do |f| %>
+  <div class='country'>
+    <div id='box_btn_1' class='continent north'>北米</div>
+    <div id='box_1'>
+      <% @north_america.each do |country| %>
+        <label>
+          <%= f.check_box :country, {multiple: true}, country, nil %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          　<%= country %>
+        </label><br>
+      <% end %>
+    </div>
+
+  
+    <div id='box_btn_2' class='continent asia'>アジア</div>
+    <div id='box_2'>
+      <% @asia.each do |country| %>
+        <label>
+          <%= f.check_box :country, {multiple: true}, country, nil %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          　<%= country %>
+        </label><br>
+      <% end %>
+    </div>
+
+  
+    <div id='box_btn_3' class='continent'>ヨーロッパ</div>
+    <div id='box_3'>
+      <% @europe.each do |country| %>
+        <label>
+          <%= f.check_box :country, {multiple: true}, country, nil %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          　<%= country %><br>
+        </label><br>
+      <% end %>
+    </div>
+
+
+  
+    <div id='box_btn_4' class='continent'>オセアニア</div>
+    <div id='box_4'>
+      <% @oceania.each do |country| %>
+        <label>
+          <%= f.check_box :country, {multiple: true}, country, nil %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          　<%= country %><br>
+        </label><br>
+      <% end %>
+    </div>
+  
+
+  
+    <div id='box_btn_5' class='continent'>南米</div>
+    <div id='box_5'>
+      <% @south_america.each do |country| %>
+        <label>
+          <%= f.check_box :country, {multiple: true}, country, nil %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          　<%= country %><br>
+        </label><br>
+      <% end %>
+    </div>
+  
+
+  
+    <div id='box_btn_6' class='continent'>中東</div>
+    <div id='box_6'>
+      <% @middle_east.each do |country| %>
+        <label>
+          <%= f.check_box :country, {multiple: true}, country, nil %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          　<%= country %><br>
+        </label><br>
+      <% end %>
+    </div>
+  
+  
+    <div id='box_btn_7' class='continent'>アフリカ</div>
+    <div id='box_7'>
+      <% @africa.each do |country| %>
+        <label>
+          <%= f.check_box :country, {multiple: true}, country, nil %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          　<%= country %><br>
+        </label><br>
+      <% end %>
+    </div>
+    <%= f.submit '決定', class: 'btn' %><br>
+    <%= link_to '未定の人はコチラ', advice_home_path, class: 'undecided' %>
+  </div>
+<% end %>
