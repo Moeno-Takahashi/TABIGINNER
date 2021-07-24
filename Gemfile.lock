@@ -58,6 +58,8 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    attr_encrypted (3.0.3)
+      encryptor (~> 3.0.0)
     autoprefixer-rails (10.2.5.1)
       execjs (> 0)
     bcrypt (3.1.16)
@@ -80,6 +82,11 @@ GEM
       ssrf_filter (~> 1.0)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
+    encryptor (3.0.0)
     erubi (1.10.0)
     execjs (2.8.1)
     faraday (1.5.1)
@@ -118,6 +125,7 @@ GEM
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
     jwt (2.2.3)
+    line-bot-api (1.19.0)
     listen (3.6.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -249,14 +257,17 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  attr_encrypted (~> 3.0.0)
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.1.1)
   byebug
   carrierwave (~> 2.0)
+  dotenv-rails
   font-awesome-sass
   jbuilder (~> 2.7)
   jquery-rails
   jquery-ui-rails
+  line-bot-api
   listen (~> 3.2)
   mini_magick
   mysql2 (>= 0.4.4)

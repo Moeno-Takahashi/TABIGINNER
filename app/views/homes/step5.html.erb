@@ -1,0 +1,13 @@
+<h1>旅人になるまであと...</h1>
+<div class='countdown-comment'>
+  <p class='remain_days'><%= @remain_days %>日！！
+    <% if @remain_days == 0 %>
+      <i class='fas fa-plus-circle open' id='open'></i>
+    <% end %>
+  </p>
+  <%= render 'shared/countdown-comment' %>
+</div>
+<div class='step'>
+  <%= image_tag 'backpacker.png', class: 'backpacker'%>
+  <%= render 'shared/new_travel' %>
+</div>

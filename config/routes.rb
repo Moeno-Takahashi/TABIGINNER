@@ -13,14 +13,22 @@ Rails.application.routes.draw do
       get :step1
       get :step2
       get :step3
+      get :step4
+      get :step5
+      get :usage
+      get :advice
+      get :terms_of_use
     end
   end
 
-  resource :plan, only: %i[show] do
+  resource :plan, only: %i[show destroy] do
     resource :country, only: %i[new create edit update]
     resource :day, only: %i[edit update]
     resource :schedule, only: %i[edit update]
   end
+
+  post '/callback' => 'linebot#callback'
+  post '/line_user' => 'linebot#create'
 
   
 end
