@@ -57,6 +57,39 @@ i{
   color: #6B6666;
 }
 
+// footer
+
+.footer-wrap{
+  width: 100%;
+  position: fixed;
+  bottom: 0; 
+  .footer{
+    display: flex;
+    width: 100%;
+    .content {
+      background: #FCF7DA;
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      width: 20%;
+      height: 20%;
+      img {
+        width: 60%;
+        margin-top: 13px;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+.content-logo {
+  height: 70%;
+  width: auto;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  opacity: 0.5;
+}
+
 // users#new
 
 .user-new-common {
