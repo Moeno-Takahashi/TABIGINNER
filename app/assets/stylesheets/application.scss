@@ -249,3 +249,46 @@ i{
     }
   }
 }
+
+// plan
+
+.plans-container {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 200px;
+  .plans-element{
+    .plans-list {
+      margin: 50px auto;
+      display: block;
+      width: 80%;
+      .plans-title {
+        border-bottom: 2px solid #6B6666;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      p {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .departure_date {
+        margin-bottom: 0px;
+      }
+      .departure-date-edit {
+        margin-top: 0px;
+      }
+    }
+  }
+  .not-plan {
+    width: 100%;
+    .btn {
+      @include btn;
+      margin-top: 150px;
+    }
+    img {
+     width: 60%;
+     margin-top: 50px;
+    }
+  }
+}

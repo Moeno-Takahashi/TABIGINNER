@@ -16,5 +16,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resource :plan, only: %i[show]
+
   
 end
