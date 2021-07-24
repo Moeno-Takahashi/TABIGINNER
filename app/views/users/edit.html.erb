@@ -1,0 +1,17 @@
+<h1>ユーザー編集</h1>
+<div class='user-new-common'>
+  <div class='user-new'>
+    <%= simple_form_for @user do |f| %>
+      <%= f.input :last_name, placeholder: 'ローマ字で入力してください' %>
+      <%= f.input :first_name, placeholder: 'ローマ字で入力してください' %>
+      <%= f.input :birthday, start_year: Date.current.year, end_year: Date.current.year - 80 %>
+      <%= f.input :user_image, as: :file %>
+      <div class='sex'>
+        <%= f.input :sex, as: :radio_buttons %>
+      </div>
+      <div class='submit'>
+       <%= f.submit class: 'btn' %>
+      </div>
+    <% end %>
+  </div>
+</div>

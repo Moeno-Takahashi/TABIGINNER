@@ -1,0 +1,19 @@
+<h1>マイページ</h1>
+<div class='user-show'>
+  <div class='user-passport'>
+    <%= image_tag 'user_passport.png' %>
+    <%= image_tag @user.user_image.url, class: 'user-image' %>
+    <figcaption class='last_name'><%= @user.last_name %></figcaption>
+    <figcaption class='first_name'><%= @user.first_name %></figcaption>
+    <figcaption class='birthday'><%= @user.birthday %></figcaption>
+    <figcaption class='sex'><%= @user.sex %></figcaption>
+  </div>
+  <div class='user-button'>
+      <%= link_to '編集', edit_user_path, class: 'btn' %><br>
+      <%= link_to 'ログアウト', logout_path, class: 'btn logout' %><br>
+      <p class='btn open' id="open">退会</p>
+  </div>
+  <%= render 'shared/delete_account' %>
+</div>
+
+

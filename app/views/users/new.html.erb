@@ -1,0 +1,21 @@
+<h1>ユーザー作成</h1>
+<div class='user-new-common'>
+  <div class='user-new'>
+  <%= simple_form_for @user, url: user_path do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <%= f.input :last_name, placeholder: 'ローマ字で入力してください', error: false %>
+    <%= f.input :first_name, placeholder: 'ローマ字で入力してください', error: false %>
+    <%= f.input :birthday, start_year: Date.current.year, end_year: Date.current.year - 80, error: false %>
+    <%= f.input :user_image, as: :file, error: false %>
+    <div class='sex'>
+      <%= f.input :sex, as: :radio_buttons, error: false %>
+    </div>
+    <%= f.input :email, error: false %>
+    <%= f.input :password, error: false %>
+    <%= f.input :password_confirmation, error: false %>
+    <div class='submit'>
+      <%= f.submit class: 'btn' %>
+    </div>
+  <% end %>
+  </div>
+</div>
