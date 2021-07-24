@@ -1,0 +1,13 @@
+<h1>LINEの友だち追加<br>をしましょう！</h1>
+<div class='step'>
+  <p>友だち追加をすると出発予定日の<br>２週間前からメッセージが届くよ！</p>
+  <div class='line-add-friend'>
+    <%= link_to image_tag("https://scdn.line-apps.com/n/line_add_friends/btn/ja.png", class: 'add_friend'), "https://lin.ee/ALPKrRc", target: :_blank  %>
+  </div>
+  <p>友だち追加が完了したら<br>完了ボタンを押してね<i class="fas fa-arrow-circle-down"></i></p>
+  <%= form_with url: line_user_path, method: :post do |f| %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.submit '完了', class: 'btn-line-user' %>
+  <% end %>
+  <%= image_tag 'backpacker.png', class: 'backpacker'%>
+</div>
