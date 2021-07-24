@@ -1,0 +1,28 @@
+<h1>旅の予定</h1>
+<div class='plans-container'>
+  <% if @plan.present? %>
+    <div class='plans-element'>
+      <div class='plans-list'>
+       <div class='plans-title'>目的地</div>
+         <p class='country_name'><%= @plan.country %><br>
+           <%= link_to '編集', edit_plan_country_path, data: {"turbolinks" => false} %>
+         </p>
+       <% if @plan.days.present? %>
+       <div class='plans-title'>日数</div>
+          <p class='days'><%= @plan.days_i18n %><br><%= link_to '編集', edit_plan_day_path %></p>
+       <% else %>
+       <div class='plans-title'>日数</div>
+         <p>未選択<br><%= link_to '編集', edit_plan_day_path %></p>
+       <% end %>
+       <div class='plans-title'>出発予定日</div>
+         <p class='departure_date'><%= @plan.departure_date ||= '未選択' %></p>
+         <% if @plan.days.present? %>
+           <p class='departure-date-edit'><%= link_to '編集', edit_plan_schedule_path %></p>
+         <% end %>
+      </div>
+    </div>
+  <% else %>
+    <%= render 'not_plan' %>
+  <% end %>
+</div>
+
