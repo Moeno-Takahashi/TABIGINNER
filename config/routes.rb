@@ -14,10 +14,11 @@ Rails.application.routes.draw do
       get :step2
       get :step3
       get :step4
+      get :step5
     end
   end
 
-  resource :plan, only: %i[show] do
+  resource :plan, only: %i[show destroy] do
     resource :country, only: %i[new create edit update]
     resource :day, only: %i[edit update]
     resource :schedule, only: %i[edit update]

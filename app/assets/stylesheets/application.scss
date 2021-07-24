@@ -70,6 +70,20 @@ i{
     @include btn;
   }
 }
+.countdown-comment {
+  text-align: center;
+  .remain_days {
+    font-size: 40px;
+    margin:20px 0 30px 0;
+    color:#6B6666;
+  }
+  .comment {
+    font-size: 15px;
+    margin-bottom: 50px;
+    color:#6B6666;
+  }
+  
+}
 
 // home#step
 
