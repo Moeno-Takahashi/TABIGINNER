@@ -1,0 +1,43 @@
+<div class='usage-common'>
+  <h4>TABIGINNERとは</h4>
+  <p class="text">「バックパッカーになって旅がしたい。」<br>「でも、不安で一歩が踏み出せない。」</p>
+  <p class="text-two">そんな人の背中を押す</p>
+  <p class="text-two">旅人育成アプリです。</p>
+  <h4>TABIGINNERの使い方</h4>
+  <section class="usage-content">
+    <h5>1. 旅の予定を決める</h5>
+    <%= image_tag 'countdown.png', class: 'image' %>
+    <div class="usage-plan">
+      <p>1. 行き先を決定する。</p>
+      <p>2. 日数を決定する。</p>
+      <p>3. 出発予定日を決定する。</p>
+    </div>
+    <i class="fas fa-arrow-circle-down"></i>
+    <p class="description">出発予定日までの<br>カウントダウンが始まるよ！</p>
+  </section>
+  <section class='usage-content'>
+    <h5>2. 持ち物リストを作成する</h5>
+    <%= image_tag 'item-list.png', class: 'image' %>
+    <%= image_tag 'item-list2.png', class: 'image' %>
+    <div class='usage-plan'>
+      <p class='description'>すでに入っている持ち物リストの<br>データ通りに旅の準備を進めよう！<br>自分だけの持ち物の登録もできるよ！</p>
+    </div>
+  </section>
+  <section class='usage-content'>
+    <h5>3. タスクリストを作成する</h5>
+    <%= image_tag 'task-list2.png', class: 'image' %>
+    <%= image_tag 'task-list.png', class: 'image' %>
+    <div class='usage-plan'>
+      <p class='description'>すでに入っているタスクリストの通りに<br>旅の準備を進めよう！<br>自分だけのタスク登録もできるよ！</p>
+    </div>
+  </section>
+  <section class='usage-content'>
+  <h5>4. LINEの友だち追加をして<br>メッセージを受け取る</h5>
+  <%= image_tag 'add_friend.png', class: 'image' %>
+  <%= image_tag 'line.png', class: 'image' %>
+  <div class='usage-plan'>
+    <p class='description'>TABIGINNER公式LINEを<br>友だち追加すると、<br>出発予定日の２週間前から毎日<br>準備の進捗確認に加え、<br>アドバイスや旅の情報が届くよ！</p>
+  </div>
+</section>
+<%= link_to 'ユーザー登録をしてはじめる', new_user_path, class: 'btn' %>
+</div>
