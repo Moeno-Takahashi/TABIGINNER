@@ -1,0 +1,49 @@
+<h1>行き先は？</h1>
+<div class='country-common'>
+  <%= render 'select-country', url: plan_country_path, method: :post  %>
+</div>
+
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(document).ready(function(){
+  $('#box_btn_1').on('click', function(){
+    $('#box_1').slideToggle();
+  });
+});
+
+$(document).ready(function(){
+  $('#box_btn_2').on('click', function(){
+    $('#box_2').slideToggle();
+  });
+});
+
+$(document).ready(function(){
+  $('#box_btn_3').on('click', function(){
+    $('#box_3').slideToggle();
+  });
+});
+
+$(document).ready(function(){
+  $('#box_btn_4').on('click', function(){
+    $('#box_4').slideToggle();
+  });
+});
+
+$(document).ready(function(){
+  $('#box_btn_5').on('click', function(){
+    $('#box_5').slideToggle();
+  });
+});
+
+$(document).ready(function(){
+  $('#box_btn_6').on('click', function(){
+    $('#box_6').slideToggle();
+  });
+});
+
+$(document).ready(function(){
+  $('#box_btn_7').on('click', function(){
+    $('#box_7').slideToggle();
+  });
+});
+</script>
