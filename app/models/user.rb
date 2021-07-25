@@ -3,6 +3,15 @@ class User < ApplicationRecord
 
   mount_uploader :user_image, UserImageUploader
 
+  has_one :plan, dependent: :destroy
+  has_one :line_user, dependent: :destroy
+  has_many :tasks, dependent: :destroy
+  has_many :items, dependent: :destroy
+  has_many :user_tasks, dependent: :destroy
+  has_many :user_task_tasks, through: :user_tasks, source: :task, dependent: :destroy
+  has_many :user_items, dependent: :destroy
+  has_many :user_item_items, through: :user_items, source: :item, dependent: :destroy
+
   validates :password, presence: true, length: { minimum: 4 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
