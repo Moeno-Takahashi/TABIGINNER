@@ -1,0 +1,146 @@
+<h1>持ち物リスト</h1>
+<div class='item-list-common'>
+  <%= render 'items-scroll' %>
+  <div class='item-list-area'>
+
+  <ul class='item-list show'>
+  <p  class='open'><i class='far fa-plus-square fa-lg'></i></p>
+    <% @my_item.each do |item| %>
+      <li class='item-title'>
+      <% if current_user.item_checked?(item) %>
+        <%= render 'unchecked', { item: item } %><%= item.title %>
+      <% else %>
+        <%= render 'checked', { item: item } %><%= item.title %>
+      <% end %>
+      </li>
+      <li class='item-body'>
+        <%= item.body %>
+        <%= link_to item_path(item.id), method: :delete do %>
+          <i class='far fa-trash-alt'></i>
+        <% end %>
+      </li>
+    <% end %>
+    <%= render 'shared/my-item', item: @item %>
+  </ul>
+
+  <ul class='item-list'>
+    <% @must_item.each do |item| %>
+    <li class='item-title'>
+    <% if current_user.item_checked?(item) %>
+      <%= render 'unchecked', { item: item } %><%= item.title %>
+    <% else %>
+      <%= render 'checked', { item: item } %><%= item.title %>
+    <% end %>
+    </li>
+    <li class='item-body'>
+      <%= item.body %>
+    </li>
+  <% end %>
+  </ul>
+
+  <ul class='item-list'>
+    <% @electronics_item.each do |item| %>
+    <li class='item-title'>
+    <% if current_user.item_checked?(item) %>
+      <%= render 'unchecked', { item: item } %><%= item.title %>
+    <% else %>
+      <%= render 'checked', { item: item } %><%= item.title %>
+    <% end %>
+    </li>
+    <li class='item-body'>
+      <%= item.body %>
+    </li>
+  <% end %>
+  </ul>
+
+  <ul class='item-list'>
+  <% @daily_necessities_item.each do |item| %>
+    <li class='item-title'>
+    <% if current_user.item_checked?(item) %>
+      <%= render 'unchecked', { item: item } %><%= item.title %>
+    <% else %>
+      <%= render 'checked', { item: item } %><%= item.title %>
+    <% end %>
+    </li>
+    <li class='item-body'>
+      <%= item.body %>
+    </li>
+  <% end %>
+  </ul>
+
+  <ul class='item-list'>
+  <% @medicine_item.each do |item| %>
+    <li class='item-title'>
+    <% if current_user.item_checked?(item) %>
+      <%= render 'unchecked', { item: item } %><%= item.title %>
+    <% else %>
+      <%= render 'checked', { item: item } %><%= item.title %>
+    <% end %>
+    </li>
+    <li class='item-body'>
+      <%= item.body %>
+    </li>
+  <% end %>
+  </ul>
+
+  <ul class='item-list'>
+  <% @clothing_hot_item.each do |item| %>
+    <li class='item-title'>
+    <% if current_user.item_checked?(item) %>
+      <%= render 'unchecked', { item: item } %><%= item.title %>
+    <% else %>
+      <%= render 'checked', { item: item } %><%= item.title %>
+    <% end %>
+    </li>
+    <li class='item-body'>
+      <%= item.body %>
+    </li>
+  <% end %>
+  </ul>
+
+  <ul class='item-list'>
+  <% @clothing_cold_item.each do |item| %>
+    <li class='item-title'>
+    <% if current_user.item_checked?(item) %>
+      <%= render 'unchecked', { item: item } %><%= item.title %>
+    <% else %>
+      <%= render 'checked', { item: item } %><%= item.title %>
+    <% end %>
+    </li>
+    <li class='item-body'>
+      <%= item.body %>
+    </li>
+  <% end %>
+  </ul>
+
+  <ul class='item-list'>
+  <% @others_item.each do |item| %>
+    <li class='item-title'>
+    <% if current_user.item_checked?(item) %>
+      <%= render 'unchecked', { item: item } %><%= item.title %>
+    <% else %>
+      <%= render 'checked', { item: item } %><%= item.title %>
+    <% end %>
+    </li>
+    <li class='item-body'>
+      <%= item.body %>
+    </li>
+  <% end %>
+  </ul>
+</div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(function() {
+  let tabs = $(".item"); 
+  $(".item").on("click", function() { 
+    $(".active").removeClass("active"); 
+    $(this).addClass("active"); 
+    const index = tabs.index(this); 
+    $(".item-list").removeClass("show").eq(index).addClass("show"); 
+  })
+})
+</script>
