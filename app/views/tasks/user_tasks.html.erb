@@ -1,0 +1,221 @@
+<h1>タスクリスト</h1>
+<div class='task-list-common'>
+<%= render 'tasks-scroll' %>
+  <div class='task-list-area'>
+
+  <ul class='task-list show'>
+  <p class='open'><i class='far fa-plus-square fa-lg'></i></p>
+    <% @my_task.each do |task| %>
+      <li class='task-title'>
+      <% if current_user.checked?(task) %>
+        <%= render 'unchecked', { task: task } %><%= task.title %>
+      <% else %>
+        <%= render 'checked', { task: task } %><%= task.title %>
+      <% end %>
+      </li>
+      <li class='task-body'>
+        <%= task.body %>
+        <%= link_to task_path(task.id), method: :delete do %>
+          <i class='far fa-trash-alt'></i>
+        <% end %>
+      </li>
+    <% end %>
+    <%= render 'shared/my-task', task: @task %>
+  </ul>
+  
+    <ul class='task-list'>
+      <% @passport_task.each do |task| %>
+        <li class='task-title'>
+        <% if current_user.checked?(task) %>
+          <%= render 'unchecked', { task: task } %><%= task.title %>
+        <% else %>
+          <%= render 'checked', { task: task } %><%= task.title %>
+        <% end %>
+        </li>
+        <li class='task-body'>
+          <%= task.body %>
+        </li>
+      <% end %>
+    </ul>
+
+    <ul class='task-list'>
+      <% @schedule_task.each do |task| %>
+        <li class='task-title'>
+        <% if current_user.checked?(task) %>
+          <%= render 'unchecked', { task: task } %><%= task.title %>
+        <% else %>
+          <%= render 'checked', { task: task } %><%= task.title %>
+        <% end %>
+        </li>
+        <li class='task-body'>
+          <%= task.body %>
+        </li>
+      <% end %>
+    </ul>
+    
+    <ul class='task-list'>
+    <% @visa_task.each do |task| %>
+      <li class='task-title'>
+      <% if current_user.checked?(task) %>
+        <%= render 'unchecked', { task: task } %><%= task.title %>
+      <% else %>
+        <%= render 'checked', { task: task } %><%= task.title %>
+      <% end %>
+      </li>
+      <li class='task-body'>
+        <%= task.body %>
+      </li>
+    <% end %>
+  </ul>
+  
+  <ul class='task-list'>
+    <% @airticket_task.each do |task| %>
+      <li class='task-title'>
+      <% if current_user.checked?(task) %>
+        <%= render 'unchecked', { task: task } %><%= task.title %>
+      <% else %>
+        <%= render 'checked', { task: task } %><%= task.title %>
+      <% end %>
+      </li>
+      <li class='task-body'>
+        <%= task.body %>
+      </li>
+    <% end %>
+  </ul>
+  
+  <ul class='task-list'>
+    <% @vaccination_task.each do |task| %>
+      <li class='task-title'>
+      <% if current_user.checked?(task) %>
+        <%= render 'unchecked', { task: task } %><%= task.title %>
+      <% else %>
+        <%= render 'checked', { task: task } %><%= task.title %>
+      <% end %>
+      </li>
+      <li class='task-body'>
+        <%= task.body %>
+      </li>
+    <% end %>
+  </ul>
+  
+  <ul class='task-list'>
+    <% @money_task.each do |task| %>
+      <li class='task-title'>
+      <% if current_user.checked?(task) %>
+        <%= render 'unchecked', { task: task } %><%= task.title %>
+      <% else %>
+        <%= render 'checked', { task: task } %><%= task.title %>
+      <% end %>
+      </li>
+      <li class='task-body'>
+        <%= task.body %>
+      </li>
+    <% end %>
+  </ul>
+  
+  <ul class='task-list'>
+    <% @internet_task.each do |task| %>
+      <li class='task-title'>
+      <% if current_user.checked?(task) %>
+        <%= render 'unchecked', { task: task } %><%= task.title %>
+      <% else %>
+        <%= render 'checked', { task: task } %><%= task.title %>
+      <% end %>
+      </li>
+      <li class='task-body'>
+        <%= task.body %>
+      </li>
+    <% end %>
+  </ul>
+  
+  
+  <ul class='task-list'>
+    <% @crime_task.each do |task| %>
+      <li class='task-title'>
+      <% if current_user.checked?(task) %>
+        <%= render 'unchecked', { task: task } %><%= task.title %>
+      <% else %>
+        <%= render 'checked', { task: task } %><%= task.title %>
+      <% end %>
+      </li>
+      <li class='task-body'>
+        <%= task.body %>
+      </li>
+    <% end %>
+  </ul>
+  
+  <ul class='task-list'>
+    <% @insurance_task.each do |task| %>
+      <li class='task-title'>
+      <% if current_user.checked?(task) %>
+        <%= render 'unchecked', { task: task } %><%= task.title %>
+      <% else %>
+        <%= render 'checked', { task: task } %><%= task.title %>
+      <% end %>
+      </li>
+      <li class='task-body'>
+        <%= task.body %>
+      </li>
+    <% end %>
+  </ul>
+  
+  <ul class='task-list'>
+    <% @hostel_task.each do |task| %>
+      <li class='task-title'>
+      <% if current_user.checked?(task) %>
+        <%= render 'unchecked', { task: task } %><%= task.title %>
+      <% else %>
+        <%= render 'checked', { task: task } %><%= task.title %>
+      <% end %>
+      </li>
+      <li class='task-body'>
+        <%= task.body %>
+      </li>
+    <% end %>
+  </ul>
+  
+  <ul class='task-list'>
+    <% @belongings_task.each do |task| %>
+      <li class='task-title'>
+      <% if current_user.checked?(task) %>
+        <%= render 'unchecked', { task: task } %><%= task.title %>
+      <% else %>
+        <%= render 'checked', { task: task } %><%= task.title %>
+      <% end %>
+      </li>
+      <li class='task-body'>
+        <%= task.body %>
+      </li>
+    <% end %>
+  </ul>
+  
+  <ul class='task-list'>
+    <% @app_task.each do |task| %>
+      <li class='task-title'>
+      <% if current_user.checked?(task) %>
+        <%= render 'unchecked', { task: task } %><%= task.title %>
+      <% else %>
+        <%= render 'checked', { task: task } %><%= task.title %>
+      <% end %>
+      </li>
+      <li class='task-body'>
+        <%= task.body %>
+      </li>
+    <% end %>
+  </ul>
+    </div>
+  </div>
+
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+jQuery(function(){
+  let tabs = $('.task'); // tabのクラスを全て取得し、変数tabsに配列で定義
+  $('.task').on('click', function() { // tabをクリックしたらイベント発火
+    $('.active').removeClass('active'); // activeクラスを消す
+    $(this).addClass('active'); // クリックした箇所にactiveクラスを追加
+    const index = tabs.index(this); // クリックした箇所がタブの何番目か判定し、定数indexとして定義
+    $('.task-list').removeClass('show').eq(index).addClass('show'); // showクラスを消して、contentクラスのindex番目にshowクラスを追加
+  })
+})
+</script>
+

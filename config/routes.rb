@@ -27,6 +27,9 @@ Rails.application.routes.draw do
     resource :schedule, only: %i[edit update]
   end
 
+  resources :tasks, only: %i[create destroy]
+  get :user_tasks, to: 'tasks#user_tasks'
+
   post '/callback' => 'linebot#callback'
   post '/line_user' => 'linebot#create'
 
