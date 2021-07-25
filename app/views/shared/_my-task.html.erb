@@ -1,0 +1,27 @@
+<dialog class='dialog'>
+  <h2>カスタム作成</h2>
+  <div class='dialog-content'>
+    <%= form_with model: task, url: tasks_path, method: :post, remote: true do |f| %>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %><br>
+      <%= f.label :body %><br>
+      <%= f.text_area :body %><br>
+      <%= f.hidden_field :category_id, value: 'my_task' %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.submit '登録', id: 'submit', class: 'btn' %>
+    <% end %>
+  </div>
+  <button type='button' id='close' class='btn'>キャンセル</button>
+</dialog>
+
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(function () {
+    $('.open').on('click', () => {
+        $('.dialog').fadeIn();
+    });
+    $('button').on('click', () => {
+        $('.dialog').fadeOut();
+    });
+});
+</script>
