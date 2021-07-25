@@ -29,9 +29,10 @@ class LinebotController < ApplicationController
   end
 
   def create
-    current_user.create_line_user!(uid: @@userId, user_id: current_user.id)
-    redirect_to step5_home_path, success: t('.success')
-    @@userId = nil
+    if current_user.create_line_user!(uid: @@userId, user_id: current_user.id)
+      redirect_to step5_home_path, success: t('.success')
+      @@userId = nil
+    end
   end
 end
 
