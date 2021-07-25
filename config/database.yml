@@ -52,3 +52,4 @@ production:
   database: TABIGINNER_production
   username: TABIGINNER
   password: <%= ENV['TABIGINNER_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
