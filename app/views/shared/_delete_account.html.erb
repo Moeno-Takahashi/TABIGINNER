@@ -1,0 +1,18 @@
+<div class='dialog'>
+  <h5>アカウント情報を削除して<br>退会してよろしいですか？</h5>
+  <%= link_to 'はい', user_path, method: :delete, class: 'btn' %>
+  <button type='button' id='close' class='btn'>いいえ</button>
+</div>
+
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(function () {
+    $('.open').on('click', () => {
+        $('.dialog').fadeIn();
+    });
+    $('button').on('click', () => {
+        $('.dialog').fadeOut();
+    });
+});
+
+</script>
