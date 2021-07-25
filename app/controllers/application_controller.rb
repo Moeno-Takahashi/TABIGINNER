@@ -4,6 +4,12 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def remain_days
+    today = Date.today
+    dead_line = current_user.plan.departure_date  
+    remain = (dead_line - today).to_i
+  end
+
   def user_plan
     @user = current_user
     @plan = @user.plan
