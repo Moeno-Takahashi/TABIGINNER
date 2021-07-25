@@ -35,4 +35,16 @@ class User < ApplicationRecord
   def checked?(task)
     task.user_tasks.pluck(:user_id).include?(id) 
   end
+
+  def item_checked(item)
+    user_item_items << item  
+  end
+
+  def item_unchecked(item)
+    user_item_items.destroy(item)
+  end
+
+  def item_checked?(item)
+    item.user_items.pluck(:user_id).include?(id)
+  end
 end
