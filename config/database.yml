@@ -53,3 +53,5 @@ production:
   username: TABIGINNER
   password: <%= ENV['TABIGINNER_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
+  adapter: postgresql
+  encoding: unicode
