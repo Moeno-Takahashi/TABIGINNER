@@ -23,4 +23,16 @@ class User < ApplicationRecord
   validates :sex, presence: true
 
   enum sex: { male: 0, female: 1 }  
+
+  def checked(task)
+    user_task_tasks << task
+  end
+
+  def unchecked(task)
+    user_task_tasks.destroy(task)
+  end
+
+  def checked?(task)
+    task.user_tasks.pluck(:user_id).include?(id) 
+  end
 end
