@@ -1,6 +1,6 @@
 class WebhookController < ApplicationController
+  before_action :user_with_departure_date
   def zero
-    user_with_departure_date
     @zero_target_person =  []
     
     @user_with_departure_date.each do |user|
@@ -24,7 +24,6 @@ class WebhookController < ApplicationController
   end
 
   def one
-    user_with_departure_date
     @one_target_person =  []
     
     @user_with_departure_date.each do |user|
@@ -48,7 +47,6 @@ class WebhookController < ApplicationController
   end
 
   def two
-    user_with_departure_date
     @two_target_person =  []
     
     @user_with_departure_date.each do |user|
@@ -72,7 +70,6 @@ class WebhookController < ApplicationController
   end
 
   def three
-    user_with_departure_date
     @three_target_person =  []
     
     @user_with_departure_date.each do |user|
@@ -96,7 +93,6 @@ class WebhookController < ApplicationController
   end
 
   def four
-    user_with_departure_date
     @four_target_person =  []
     
     @user_with_departure_date.each do |user|
@@ -120,7 +116,6 @@ class WebhookController < ApplicationController
   end
 
   def five
-    user_with_departure_date
     @five_target_person =  []
     
     @user_with_departure_date.each do |user|
@@ -144,7 +139,6 @@ class WebhookController < ApplicationController
   end
 
   def six
-    user_with_departure_date
     @six_target_person =  []
     
     @user_with_departure_date.each do |user|
@@ -168,7 +162,6 @@ class WebhookController < ApplicationController
   end
 
   def seven
-    user_with_departure_date
     @seven_target_person =  []
     
     @user_with_departure_date.each do |user|
@@ -192,7 +185,6 @@ class WebhookController < ApplicationController
   end
 
   def eight
-    user_with_departure_date
     @eight_target_person =  []
     
     @user_with_departure_date.each do |user|
@@ -217,7 +209,6 @@ class WebhookController < ApplicationController
   end
 
   def nine
-    user_with_departure_date
     @nine_target_person =  []
     
     @user_with_departure_date.each do |user|
@@ -241,7 +232,6 @@ class WebhookController < ApplicationController
   end
 
   def ten
-    user_with_departure_date
     @ten_target_person =  []
     
     @user_with_departure_date.each do |user|
@@ -265,7 +255,6 @@ class WebhookController < ApplicationController
   end
   
   def eleven
-    user_with_departure_date
     @eleven_target_person =  []
     
     @user_with_departure_date.each do |user|
@@ -289,7 +278,6 @@ class WebhookController < ApplicationController
   end
 
   def twelve
-    user_with_departure_date
     @twelve_target_person =  []
     
     @user_with_departure_date.each do |user|
@@ -313,7 +301,6 @@ class WebhookController < ApplicationController
   end
 
   def thirteen
-    user_with_departure_date
     @thirteen_target_person =  []
     
     @user_with_departure_date.each do |user|
@@ -337,7 +324,6 @@ class WebhookController < ApplicationController
   end
 
   def fourteen
-    user_with_departure_date
     @fourteen_target_person =  []
     
     @user_with_departure_date.each do |user|
