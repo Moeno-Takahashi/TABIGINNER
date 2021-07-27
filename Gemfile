@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# Bundle edge Rails instep: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.7'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4'
@@ -25,6 +25,8 @@ gem 'line-bot-api'
 gem 'dotenv-rails' 
 
 gem "attr_encrypted", "~> 3.0.0"
+
+gem 'config'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -77,4 +79,3 @@ gem 'rails-i18n'
 group :production do
   gem 'pg'
 end
-
