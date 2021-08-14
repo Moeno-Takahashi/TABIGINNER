@@ -1,9 +1,7 @@
 class PlansController < UsersController
   before_action :user_plan
 
-  def show
-    @country = @plan.country.delete('["]')
-  end
+  def show; end
 
   def destroy
     @task = current_user.user_task_tasks

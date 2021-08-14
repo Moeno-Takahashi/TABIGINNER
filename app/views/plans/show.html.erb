@@ -4,7 +4,7 @@
     <div class='plans-element'>
       <div class='plans-list'>
        <div class='plans-title'>目的地</div>
-         <p class='country_name'><%= @country%><br>
+         <p class='country_name'><%= @plan.country.delete('["]') %><br>
            <%= link_to '編集', edit_plan_country_path, data: {"turbolinks" => false} %>
          </p>
        <% if @plan.days.present? %>

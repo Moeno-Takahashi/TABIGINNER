@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :plan do
-    country { "[\"インド\"]" }
+    country { "インド" }
     days { "one_week" }
     departure_date { Date.today + 20 }
     association :user

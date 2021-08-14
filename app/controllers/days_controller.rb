@@ -7,6 +7,7 @@ class DaysController < PlansController
       if @plan.departure_date.present?
         redirect_to plan_path, success: t('.success')
       else
+        current_user.update!(status: 2)
         redirect_to step3_home_path, success: t('.success')
       end
     end

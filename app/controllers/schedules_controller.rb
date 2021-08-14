@@ -7,6 +7,7 @@ class SchedulesController < PlansController
       if current_user.line_user.present?
         redirect_to step5_home_path, success: t('.success')
       else
+        current_user.update!(status: 3)
         redirect_to step4_home_path, success: t('.success')
       end
     end

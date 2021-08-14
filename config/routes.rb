@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'errors/401'
   root 'homes#index'
 
   resource :user, only: %i[new create show edit update destroy]
@@ -39,5 +40,4 @@ Rails.application.routes.draw do
   post '/callback' => 'linebot#callback'
   post '/line_user' => 'linebot#create'
 
-  
 end

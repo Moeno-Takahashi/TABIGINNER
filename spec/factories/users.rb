@@ -8,7 +8,6 @@ FactoryBot.define do
     password { '12345678' }
     password_confirmation { '12345678' }
   
-  
     trait :user_with_tasks do
       after(:build) do |user|
         user.tasks  << build(:task)
@@ -19,18 +18,21 @@ FactoryBot.define do
       after(:build) do |user|
         create(:plan, user: user)
       end
+      status {3}
     end
 
     trait :user_not_have_days do
       after(:build) do |user|
         create(:plan, days: nil, departure_date: nil, user: user)
       end
+      status {1}
     end
 
     trait :user_not_have_departure_date do
       after(:build) do |user|
         create(:plan, departure_date: nil, user: user)
       end
+      status {2}
     end
 
     trait :user_with_image do
@@ -41,6 +43,7 @@ FactoryBot.define do
       after(:build) do |user|
         create(:line_user, user: user)
       end
+      status {4}
     end
   end
 end

@@ -21,8 +21,10 @@ class User < ApplicationRecord
   validates :first_name, presence: true, format: { with: /\A[a-zA-Z]+\z/ }
   validates :birthday, presence: true
   validates :sex, presence: true
+  validates :status, presence: true
 
   enum sex: { male: 0, female: 1 }  
+  enum status: { not_plan: 0, country_decided: 1, days_decided: 2, departure_date_decided: 3, add_line_friend: 4 }
 
   def checked(task)
     user_task_tasks << task
