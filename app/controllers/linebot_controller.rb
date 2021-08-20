@@ -30,6 +30,7 @@ class LinebotController < ApplicationController
 
   def create
     if current_user.create_line_user!(uid: @@userId, user_id: current_user.id)
+      current_user.update!(status: 4)
       redirect_to step5_home_path, success: t('.success')
       @@userId = nil
     end

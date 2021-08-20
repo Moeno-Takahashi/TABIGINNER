@@ -1,3 +1,4 @@
+
 class UserSessionsController < ApplicationController
   skip_before_action :require_login, only: [:new, :create]
   
@@ -10,22 +11,16 @@ class UserSessionsController < ApplicationController
 
   def create
     if @user = login(params[:email], params[:password])
-      if @user.plan.present?
-        if @user.plan.days.present?
-          if @user.plan.departure_date.present?
-            if @user.line_user.present?
-              redirect_to step5_home_path, success: t('.success')
-            else
-              redirect_to step4_home_path, success: t('.success')
-            end  
-          else
-            redirect_to step3_home_path, success: t('.success')
-          end
-        else
-          redirect_to step2_home_path, success: t('.success')
-        end
-      else
-        redirect_to step1_home_path, success: t('.success')
+      if current_user.add_line_friend?
+       redirect_to step5_home_path, success: t('.success')
+      elsif current_user.departure_date_decided?
+       redirect_to step4_home_path, success: t('.success')
+      elsif current_user.days_decided?
+       redirect_to step3_home_path, success: t('.success')
+      elsif current_user.country_decided?
+       redirect_to step2_home_path, success: t('.success')
+      elsif current_user.not_plan?
+       redirect_to step1_home_path, success: t('.success')
       end
     else
       flash[:danger] = t('.fail')

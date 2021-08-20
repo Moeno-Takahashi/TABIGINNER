@@ -27,6 +27,8 @@ gem 'dotenv-rails'
 gem "attr_encrypted", "~> 3.0.0"
 
 gem 'config'
+
+gem "pundit"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

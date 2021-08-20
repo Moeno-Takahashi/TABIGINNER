@@ -7,21 +7,15 @@
       <%= link_to image_tag('calender.png', class: 'content-logo'), plan_path %>
     </div>
     <div class='content'>
-      <% if @plan.present? %>
-        <% if @plan.days.present? %>
-          <% if @plan.departure_date.present? %>
-            <% if current_user.line_user.present? %>
-              <%= link_to image_tag('home.png', class: 'content-logo'), step5_home_path %>
-            <% else %>
-              <%= link_to image_tag('home.png', class: 'content-logo'), step4_home_path %>
-            <% end %>
-          <% else %>
-            <%= link_to image_tag('home.png', class: 'content-logo'), step3_home_path %>
-          <% end %>
-        <% else %>
-          <%= link_to image_tag('home.png', class: 'content-logo'), step2_home_path %>
-        <% end %>
-      <% else %>
+      <% if current_user.add_line_friend? %>
+        <%= link_to image_tag('home.png', class: 'content-logo'), step5_home_path %>
+      <% elsif current_user.departure_date_decided? %>
+        <%= link_to image_tag('home.png', class: 'content-logo'), step4_home_path %>
+      <% elsif current_user.days_decided? %>
+        <%= link_to image_tag('home.png', class: 'content-logo'), step3_home_path %>
+      <% elsif current_user.country_decided? %>
+        <%= link_to image_tag('home.png', class: 'content-logo'), step2_home_path %>
+      <% elsif current_user.not_plan? %>
         <%= link_to image_tag('home.png', class: 'content-logo'), step1_home_path %>
       <% end %>
     </div>
