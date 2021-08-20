@@ -29,7 +29,7 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @task = Task.find(params[:id])
+    @task = current_user.tasks.find(params[:id])
     @task.destroy! 
     flash[:success] = t('.success')
     redirect_to user_tasks_path
